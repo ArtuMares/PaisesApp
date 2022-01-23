@@ -1,0 +1,23 @@
+<h2>Por Region</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <app-pais-buscar
+        (onEnter)="buscar($event)" 
+        (onDebounce)="sugerencias($event)"
+        placeholder="Buscar Region..."
+        ></app-pais-buscar>
+    </div>
+</div>
+
+<hr>
+<div *ngIf="Error" class="alert alert-danger">
+    No se encontró un país de la región: <b>"{{termino}}"</b>
+</div>
+
+<div *ngIf=" paises.length>0" class="row">
+    <div class="col">
+        <app-pais-tabla [Paises]="paises"></app-pais-tabla>
+    </div>
+</div>
