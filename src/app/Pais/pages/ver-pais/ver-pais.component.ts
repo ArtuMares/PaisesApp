@@ -25,7 +25,7 @@ export class VerPaisComponent implements OnInit {
       )
     .subscribe(pais=> {
       this.pais=pais[0];
-      console.log(this.pais);
+      //console.log(this.pais);
     });
     /*this.activatedRoute.params.subscribe(({idPais})=>{    //otra manera de hacerlo, se hace un subscribe dentro de otro subscribe
       console.log(idPais);

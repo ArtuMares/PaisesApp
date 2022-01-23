@@ -1,18 +1,18 @@
-<h2>Por Capital</h2>
-<hr>
+<div class="animate__animated animate__fadeIn animate__faster">
+    <h2>Por Capital</h2>
+    <hr>
 
-<div class="row">
-    <div class="col">
-        <app-pais-buscar
-        (onEnter)="buscar($event)" 
-        (onDebounce)="sugerencias($event)"
-        placeholder="Buscar Capital..."
-        ></app-pais-buscar>
+    <div class="row">
+        <div class="col">
+            <app-pais-buscar (onEnter)="buscar($event)" (onDebounce)="sugerencias($event)"
+                placeholder="Buscar Capital..."></app-pais-buscar>
+        </div>
     </div>
+    <hr>
 </div>
 
-<hr>
-<div *ngIf="Error" class="alert alert-danger">
+
+<div *ngIf="Error" class="alert alert-danger animate__animated animate__fadeIn animate__faster">
     No se encontró un país con la capital: <b>"{{termino}}"</b>
 </div>
 

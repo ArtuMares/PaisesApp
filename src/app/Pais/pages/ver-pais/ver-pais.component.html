@@ -1,8 +1,8 @@
-<div *ngIf="!pais; else divPais" class="alert alert-info">
+<div *ngIf="!pais; else divPais" class="alert alert-info animate__animated animate__fadeIn animate__faster"> 
     Buscando País...
 </div>
 
-<ng-template #divPais>
+<ng-template #divPais class="animate__animated animate__fadeIn animate__faster">
     <div *ngIf="pais" class="row">
         <div class="col-12">
             <h1>Pais: <small>{{pais.name.common}}</small></h1>

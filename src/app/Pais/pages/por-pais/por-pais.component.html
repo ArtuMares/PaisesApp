@@ -1,4 +1,5 @@
-<h2>Por Pais</h2>
+<div class="animate__animated animate__fadeIn animate__faster">
+    <h2>Por Pais</h2>
 <hr>
 
 <div class="row">
@@ -11,8 +12,19 @@
     </div>
 </div>
 
+<ul class="list-group" *ngIf="mostrarSugerencias">
+    <li class="list-group-item list-group-item-action" *ngFor="let pais of paisesSugeridos">
+        <a class="nav-link" [routerLink]="['/pais',pais.cca2]">{{pais.name.common}}</a>
+    </li>
+    <li class="list-group-item list-group-item-action">
+        <a class="nav-link" (click)="buscarSugerencias(termino)" >Buscar: <b>"{{termino}}"</b></a>
+    </li>
+</ul>
+
+
 <hr>
-<div *ngIf="Error" class="alert alert-danger">
+</div>
+<div *ngIf="Error" class="alert alert-danger animate__animated animate__fadeIn animate__faster">
     No se encontró nada con el término: <b>"{{termino}}"</b>
 </div>
 
